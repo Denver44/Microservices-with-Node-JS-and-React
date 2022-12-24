@@ -8,12 +8,15 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const commentsByPostId = {}; // Here all our post will be saved.
+// Here all our post will be saved.
+const commentsByPostId = {};
 
+// Create a comments associated with the given post ID.
 app.get('/posts/:id/comments', (req, res) => {
   res.send(commentsByPostId[req.params.id] || []);
 });
 
+// Retrieve all comments associated with the given Post ID.
 app.post('/posts/:id/comments', (req, res) => {
   const commentId = randomBytes(4).toString('hex');
   const { content } = req.body;
@@ -28,5 +31,5 @@ app.post('/posts/:id/comments', (req, res) => {
 });
 
 app.listen(4001, () => {
-  console.log('Listening on 4001');
+  console.log('Comment Service Listening on 4001');
 });
