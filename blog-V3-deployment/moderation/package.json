@@ -1,18 +1,17 @@
 {
-  "name": "Query-Service",
+  "name": "moderation",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "axios": "^1.3.4",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
   }
 }
