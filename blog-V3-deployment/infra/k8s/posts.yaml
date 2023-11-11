@@ -1,0 +1,19 @@
+# The following YAML configuration file, posts.yaml, defines a Kubernetes Pod.
+
+apiVersion: v1 # Specifies the version of the Kubernetes API used for creating this object.
+kind: Pod # Indicates that the object being created is a Pod.
+metadata: # The metadata section is used to provide a name and optional details for the Pod.
+  name: posts # Sets the name of the Pod.
+spec: # The spec section defines the desired state of the Pod.
+  containers: # Specifies a list of containers to be launched within the Pod.
+    - name: posts # Sets the name of the container.
+      image: denver44/posts:0.0.1 # Specifies the Docker image to be used for this container.
+      # The image is sourced from version 0.0.1 in the posts repository of the Docker user denver44.
+#
+#
+# kubectl apply -f posts.yaml
+# The command kubectl apply -f posts.yaml deploys a Kubernetes Pod named "posts" by applying the configuration defined in the posts.yaml file. It uses the kubectl apply command to create or update resources on the Kubernetes cluster based on the specifications in the YAML file. If the Pod already exists, it will be updated with the new configuration; otherwise, a new Pod will be created.
+
+# kubectl get pods
+# The command kubectl get pods lists all the Pods running on the Kubernetes cluster. The output of this command will look similar to the following:
+
