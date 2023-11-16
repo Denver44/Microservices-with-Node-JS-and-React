@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: denver/auth
+          image: denver44/auth
 ---
 apiVersion: v1
 kind: Service
